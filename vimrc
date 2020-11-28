@@ -17,8 +17,8 @@ set fileencoding=utf-8
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype python setlocal omnifunc=python3complete#Complete
 
-autocmd FileType python  command! -buffer PyRun execute "!python3 %"
-autocmd FileType python  command! -buffer PyDebug  execute "!python3 -m pdb %"
+autocmd FileType python  command! -buffer -nargs=* PyRun    execute "!python3 % <args>"
+autocmd FileType python  command! -buffer -nargs=* PyDebug  execute "!python3 -m pdb % <args>"
 
 
 
