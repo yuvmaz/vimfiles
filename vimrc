@@ -1,16 +1,15 @@
 syntax on
 filetype plugin indent on
 let mapleader = ";"
-inoremap kj <ESC>
-nnoremap <Leader>n :NERDTreeToggle<CR>
-set backspace=indent,eol,start
 
 set norelativenumber
 
 
 set encoding=utf-8
 set fileencoding=utf-8
-
+inoremap kj <ESC>
+nnoremap <Leader>n :NERDTreeToggle<CR>
+set backspace=indent,eol,start
 
 " Python Settings
 "
@@ -20,7 +19,7 @@ autocmd Filetype python setlocal omnifunc=python3complete#Complete
 autocmd FileType python  command! -buffer -nargs=* PyRun    execute "!python3 % <args>"
 autocmd FileType python  command! -buffer -nargs=* PyDebug  execute "!python3 -m pdb % <args>"
 
-
+let g:jedi#usages_command = ";u" 
 
 " Go Settings
 "
