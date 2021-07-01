@@ -38,3 +38,4 @@ let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 
 set shiftwidth=4
+colorscheme wal
